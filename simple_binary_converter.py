@@ -38,6 +38,6 @@ for i2 in sum:
     result += i2
 
 # map(str, sum) แปลงค่าใน sum เป็น string
-# จักรูปแบบสมการ ใช้ join รวมค่าใน list เป็นข้อมูลเดียวกันและคั่นระหว่างค่าด้วย +
+# จัดรูปแบบสมการ ใช้ join รวมค่าใน list เป็นข้อมูลเดียวกันและคั่นระหว่างค่าด้วย +
 equation = ' + '.join(map(str, sum))
 print(equation,'=',result)
