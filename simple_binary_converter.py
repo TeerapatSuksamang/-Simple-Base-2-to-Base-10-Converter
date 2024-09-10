@@ -1,8 +1,14 @@
 print('Simple Base-2 to Base-10 Converter')
 print('_________________________________________\n')
 
+while True:
+    base2 = input('Input your base-2 number : ')
 
-base2 = input('Input your base-2 number : ')
+    # เช็คตัวเลขทั้งหมดที่รับเข้ามาว่ามีแค่เลขฐาน 2 ใช่หรือไม่
+    if all(input_check in '01' for input_check in base2):
+        break
+    else:
+        print('\nEnter only base 2 numbers!!')
 
 # สร้าง list ว่างสำหรับเก็บเลขแต่ละตำแหน่ง
 number_list = []
@@ -27,12 +33,14 @@ current_index = 0
 for num in number_list:
     num + 1
     number_len -= 1
+    # คำนวนเลขฐาน10 และแสดงสมการ
     sum.append(num * 2 ** number_len) 
     print('Index ',current_index,' is ',num,'x',2,'^',number_len,'=',sum[current_index])
     current_index += 1
 
 print('\n--------------------------------\n')
 
+# คำนวนผลรวมทั้งหมด
 result = 0
 for i2 in sum:
     result += i2
